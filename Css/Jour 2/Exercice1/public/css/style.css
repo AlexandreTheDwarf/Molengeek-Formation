@@ -1,0 +1,139 @@
+/* début Aspect général */
+*{
+    font-family: arial;
+}
+body{
+    background-color: #f2f2f2;
+    padding: 100px 0 200px 0;
+}
+h1{
+    text-align: center;
+}
+h1,h3{
+    color: #0d0d0d;
+}
+.container{
+    width: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.float-left{
+    float: left;
+    margin-right: 20px;
+   
+}
+.box-300{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+}
+.box-400-600{
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.clear{
+    clear: both;
+}
+/* fin Aspect général */
+
+
+
+/* début exo 01 background-color */
+.bg-color-1{
+    background-color: blueviolet;
+}
+.bg-color-2{
+    background-color: chocolate;
+}
+/* fin exo 01 background-color */
+
+/* début exo 02 background*/
+
+.bg-1{
+    background-image: linear-gradient(blueviolet, chocolate);
+}
+.bg-2{
+    background-image: radial-gradient(blueviolet, chocolate);
+}
+.bg-3{
+    background-image: linear-gradient(to right, blueviolet, chocolate);
+}
+.bg-4{
+    background-image: linear-gradient(to top right, blueviolet, chocolate);
+} 
+
+/* fin exo 02 background*/
+
+/* début exo 03 background-position*/
+
+.img-1{ 
+    background-image: url(../img/bg_image.jpg);
+}
+.img-2{
+    background-image: url(../img/bg_image.jpg);
+    background-position: center;
+}
+.img-3{
+    background-image: url(../img/bg_image.jpg);
+    background-position: right;
+}
+.img-4{
+    background-image: url(../img/bg_image.jpg);
+    background-position: left;
+} 
+
+/* fin exo 03 background-position*/
+
+/* début exo 04 background-repeat*/
+ 
+.img-5{
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-repeat: no-repeat;
+}
+.img-6{
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-repeat: repeat-x;
+}
+.img-7{
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-repeat: repeat-y;
+} 
+
+/* fin exo 04 background-repeat*/
+
+/* début exo 05 background-size*/
+ 
+.img-8{ 
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-size: 10%;
+}
+.img-9{ 
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-size: 20% 50%;
+}
+.img-10{
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-size: cover;
+}
+.img-11{
+    background-image: url(../img/bg_image_petite.jpg) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+} 
+
+/* fin exo 05 background-size*/
+
+/* début exo 06 background-attachement*/
+
+.img-12{
+}
+.img-13{
+} 
+
+/* fin exo 06 background-attachement*/
+
+

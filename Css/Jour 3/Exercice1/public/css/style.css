@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "ChannelFont";
+  src: url(../font/Couture.otf);
+}
+
+body{
+    margin: auto;
+    font-family: "channelFont";
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 10% 10% 10% 10%;
+}
+
+section > div {
+    width: 40%;
+}
+
+img{
+  width: 400px;
+  transform: scale(100%);
+  transition-duration: 5s;
+}
+
+img:hover{
+  transform: scale(150%);
+  transition-duration: 5s;
+}
+
+.div-right > div {
+  width: 75%;
+}
+
+h1{
+    border-bottom: solid 5px black;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.div-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 0.5px lightgray;
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+}
+  
+label input[type="checkbox"] {
+    position: absolute;
+    left: -9999px; /* Cache l'input */
+}
+  
+label svg {
+    transition: fill 0.3s ease; /* Animation lors du changement de couleur */
+}
+  
+label input[type="checkbox"]:checked + svg {
+    fill: black; /* Couleur de l'étoile quand elle est cochée */
+}
+  
+h3 {
+    text-transform: uppercase;
+}
+
+select {
+  width: 100%;
+  border : none;
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+.div-right :nth-child(3){
+  margin-bottom : 30px;
+}
+
+button{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  transition-duration: 2s;
+}
+
+button:hover{
+  background-color: chartreuse;
+  color: white;
+  transition-duration: 2s;
+}
+
+.div-right :nth-child(4){
+  margin-bottom : 30px;
+}

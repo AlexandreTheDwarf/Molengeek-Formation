@@ -1,0 +1,97 @@
+.section-one{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 250px;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.surlign{
+    width: 100%;
+    background-color: lightgray;
+    height: 20px;
+    position: relative;
+    bottom: 70px;
+    opacity: 60%;
+}  
+
+.section-one:hover .surlign{
+    animation-name: slider;
+}
+
+.section-one:hover .red{
+    animation-name: square;
+}
+
+.section-one:hover .surlign,
+.section-one:hover .red {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Applique la même fonction de timing */
+    animation-direction: alternate;
+}
+
+.red{
+    width: 150px;
+    height: 150px;
+    border: solid 1px black; 
+}
+
+@keyframes square {
+    0% {
+        background-color: blue;
+    }
+    50%{
+        background-color: orange;;
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+@keyframes slider {
+    0% {
+        bottom: 160px;
+    }
+    100% {
+        bottom: 70px;  
+    }
+}
+
+.section-two{
+        width: 50%;
+        height: 250px;
+        margin-top: 10%;
+}
+
+.section-two > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.lightblue {
+    width: 150px;
+    height: 150px;
+    border: solid 1px black; 
+    color: white;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: rotate 1s ease-in-out;
+}
+
+.div-x:hover{
+    rotate: x 360deg;
+}
+
+.div-y:hover{
+    rotate: y 360deg;
+}
+
+.div-z:hover{
+    rotate: z 360deg;
+}

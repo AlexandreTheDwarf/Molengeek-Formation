@@ -1,0 +1,120 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0 0 0;
+    background-color: black;
+}
+
+section{
+    width: 70vw;
+    height: 75vh;
+    background-color: #15171E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 48%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gauche{
+    background-color: #23252b;
+}
+
+.droite{
+    background-color: #313339;
+}
+
+.card-header{
+    width: 100%;
+    height: 60%;
+}
+
+.card-header > span {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    top: 10px; left: 5px;
+}
+
+.card-body{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+svg{
+    width: 30px;
+}
+
+.wow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #c2c2c4;
+}
+
+h1{
+    margin-right: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #dcdcdd;
+}
+
+h1 + span {
+    font-size: 16px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0; 
+    color: #ffb412;
+}
+
+.card-footer{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gauche > .card-header{
+    background-image: url("../img/WOW_11p0_TWW_EarlyAccessBanners_ProductAssetGallery-Logos-v1_1920x1080_enUS_JL01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.droite > .card-header{
+    background-image: url("../img/WoW_12Months_ShopYearofAzeroth2024_BnetShop_BrowsingCard_1920x1080.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.droite > .card-body {
+    height: 25%;
+}

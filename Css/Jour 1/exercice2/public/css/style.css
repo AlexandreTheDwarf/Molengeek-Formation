@@ -1,0 +1,33 @@
+section{
+    padding-bottom: 50px;
+    border-bottom: solid 1px black;
+}
+
+section:first-child{
+    color: blue;
+}
+
+section:nth-child(2){
+    border-bottom: solid 5px red;
+}
+
+.title-red, .ul-red{
+    color:red;
+}
+
+li > a {
+    font-size: 25px;
+}
+
+h3 + span {
+    color: cornflowerblue;
+}
+
+img[src="https://media.giphy.com/media/jB5yvgkfOa5VK/giphy.gif"] {
+    border-radius: 50%;
+    border: solid 2px navajowhite;
+}
+
+section:last-of-type:hover {
+    color: chartreuse;
+}

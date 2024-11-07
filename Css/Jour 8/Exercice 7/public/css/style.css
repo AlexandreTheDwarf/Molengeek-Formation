@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 99vw;
+    height: auto;
+}
+
+header{
+    height: 80vh;
+    width: 100%;
+}
+
+header > nav {
+    height: 20%;
+    width: 100%;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > nav > div {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+}
+
+header > nav > div > p {
+    font-size: large;
+}
+
+header > section {
+    height: 80%;
+    width: 100%;
+    background-color: #DC3545;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+header > section > img {
+    width: 12%;
+}
+
+header > section > h1 {
+    font-size: x-large;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.Portfolio{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.Portfolio > h1{
+    font-size: x-large;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container > div {
+    width: 30%;
+    margin-bottom: 1%;
+}
+
+.container > div > img {
+    width: 100%;
+}
+
+.About{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DC3545;
+    color: whitesmoke;
+}
+
+.About > h1{
+    margin-bottom: 2%;
+}
+
+.About > div{
+    width: 45%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.About > div > p{
+    width: 40%;
+    height: 80%;
+}
+
+.Contact{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.Contact > h1 {
+    font-size: x-large;
+    margin-top: 2%;
+}
+
+.Contact > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+}
+
+.Contact > form > label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1%;
+}
+
+.Contact > form > input {
+    width: 100%;
+    height: 8%;
+    text-align: left;
+    margin-bottom: 5%;
+    border: solid 1px lightgray
+}
+
+.Contact > form > textarea {
+    width: 100%;
+    height: 30%;
+    text-align: left;
+    margin-bottom: 5%;
+    border: solid 1px lightgray
+}
+
+.Contact > form > button {
+    background-color: #DC3545;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding : 3%;
+    margin-left: 0;
+    align-self: flex-start;
+}
+
+footer{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2C3E50;
+    color: whitesmoke;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    text-align: center;
+}
+
+.footer-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+}
+
+.footer-container > div > h2{
+    font-size: large;
+}
+
+.footer-container > div > p{
+    font-size: large;
+}
+
+.social {
+    width: 80%;
+    height: 35%;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle{
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+    border: solid 1px whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle > svg {
+    width: 50%;
+    filter: invert(100%) sepia(7%) saturate(7500%) hue-rotate(212deg) brightness(114%) contrast(107%);
+}
+
+.green{
+    color: #1ABC9C;
+}
+
+.copyright{
+    width: 100%;
+    background-color: #1A252F;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:425px) {
+    header > nav{
+        justify-content: space-around;
+    }
+
+    header > nav > div {
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    header > nav > div > p {
+        font-size: small;
+    }
+
+    header > nav > div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+
+    .container {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container > div {
+        width: 50%;
+    }
+
+    .About > div{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .About > div > p{
+        width: 40%;
+        height: 80%;
+    }
+
+    .footer-container{
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .footer-container > div > h2{
+        font-size: small;
+    }
+    
+    .footer-container > div > p{
+        font-size: small;
+    }
+
+    .circle{
+        width: 20%;
+        height: 40%;
+    }
+}
+
+@media (min-width:426px) and (max-width:1024px){
+    header > nav{
+        justify-content: space-around;
+    }
+
+    header > nav > div {
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    header > nav > div > p {
+        font-size: small;
+    }
+
+    header > nav > div:nth-of-type(2){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+
+    .container {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container > div {
+        width: 50%;
+    }
+
+    .footer-container{
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .footer-container > div > h2{
+        font-size: medium;
+    }
+    
+    .footer-container > div > p{
+        font-size: medium;
+    }
+
+    .circle{
+        width: 20%;
+        height: 55%;
+    }
+}

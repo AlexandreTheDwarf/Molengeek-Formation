@@ -1,0 +1,107 @@
+nav ul{
+    display:flex;
+    justify-content: space-around; 
+    list-style-type: none;
+}
+
+/* Exercice 1 */
+
+@media (min-width:1250px){
+    .exo1-li-1{
+        color: blue;
+    }
+    .exo1-li-2{
+        color: green;
+    }
+}
+
+/* Exercice 2 */
+
+@media (max-width:1250px){
+    .exo2-li-1{
+        color: orange;
+    }
+    .exo2-li-2{
+        color: red;
+    }
+}
+
+/* Exercice 3 */
+
+@media (max-width:1000px){
+    .exo3-li-1{
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width:1250px){
+    .exo3-li-2{
+        color: blue;
+        font-style: italic;
+    }
+}
+
+/* Exercice 4 */
+
+@media (max-width:800px), (min-width:900px){
+    .exo4-h2{
+        border: solid 1px green;
+        color: green;
+    }
+}
+
+/* Exercice 5 */
+
+@media (min-width:900px), (max-width:1250px){
+    .exo5-h2, .exo5-li{
+        border: solid 1px red;
+        color: red;
+    }
+}
+
+/* Exercice 6 */
+
+#exo6{
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/tartine.jpg);
+}
+
+@media (max-width:9000px){
+    .exo6{
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* Exercice 7 */ 
+
+@media print {
+    h2{
+        color : black;
+    }
+    img{
+        display: none;
+    }
+}
+
+/* Exercice 8 */
+
+@media (max-width:425px){
+    .exo8-ul{
+        flex-direction: column;
+    }
+    .exo8-link:hover{
+        color: orange;
+    }
+}
+
+@media (min-width:1250px){
+    .exo8-link{
+        font-size: larger;
+    }
+    .exo8-link:hover{
+        color: green;
+    }
+}

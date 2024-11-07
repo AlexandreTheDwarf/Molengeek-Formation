@@ -1,0 +1,29 @@
+
+section{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div{
+    width: 33%;
+    height: 33%;
+    border: solid 1px black;
+    margin-bottom: 5px;
+}
+
+.div-yellow{
+    background-color: yellow;
+}
+
+.div-black{
+    background-color: black;
+}
+
+.div-red{
+    background-color: red;
+}
+

@@ -1,0 +1,101 @@
+.exercice-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: lightblue;
+    width: 99vw;
+    height: 90vh;
+}
+
+.exercice-1 > div {
+    background-color: red;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}
+
+.exercice-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightblue;
+    width: 99vw;
+    height: 90vh;
+}
+
+.exercice-2 > div {
+    background-color: red;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}
+
+.exercice-2 div:nth-child(4){
+    width: 400px;
+}
+
+.exercice-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    width: 99vw;
+    height: 90vh;
+}
+
+.exercice-3 > div {
+    background-color: red;
+    display: flex;
+    width: 400px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    padding: 40px;
+}
+
+.exercice-3 div:first-child{
+    width: 100px;
+}
+
+.exercice-4{
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.exercice-4 > div {
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 100px;
+}
+
+.exercice-4 > .div-1{
+    width: 100%;
+}
+
+.exercice-4 > .div-2{
+    width: 49.8%;
+}
+
+.exercice-4 > .div-3{
+    width: 33%;
+}
+
+.exercice-4 > .div-12{
+    width: 8%;
+}

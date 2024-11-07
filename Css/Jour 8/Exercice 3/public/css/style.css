@@ -1,0 +1,23 @@
+@media (min-width:320px) and (max-width:600px){
+    .square{
+        width: 99vw;
+        height: 99vw;
+        background-color: orange;
+    }
+}
+
+@media (min-width:600px) and (max-width:1024px){
+    .square{
+        width: 66vw;
+        height: 66vw;
+        background-color: red;
+    }
+}
+
+@media (min-width:1024px){
+    .square{
+        width: 33vw;
+        height: 33vw;
+        background-color: blue;
+    }
+}

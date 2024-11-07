@@ -1,0 +1,88 @@
+body {
+  margin: 0
+}
+
+section{
+  background-color: #4da6ff ;
+}
+
+h2{
+  color: yellow;
+  border: solid 2px black;
+  height: 300px;
+}
+
+/* Exo margin */
+h2:first-of-type{
+  margin: 50px;
+}
+
+h2:nth-of-type(2){
+  margin-left: 20px;
+}
+
+h2:nth-of-type(3){
+  margin: auto;
+}
+/* fin exo margin */
+
+/* exo padding */
+h2:nth-of-type(4){
+  padding: 50px;
+}
+
+h2:nth-of-type(5){
+  padding-left: 20%;
+}
+/* fin exo padding */
+
+/* exo display */
+.display > h2{
+  margin: 10px;
+  padding: 5px;
+  /*display: inline-block;*/
+  /*display: inline;*/
+  display: none;
+}
+/* fin exo display */
+
+/* exo float */
+/*
+.float >h2{
+  width: auto;
+  float: left;
+  overflow: visible;
+}
+*/
+/* fin float */
+
+/* exo position */
+.position{
+  position: relative;
+  top: 50px;
+  left : 50%;
+}
+.position > h2{
+  /* position: absolute; */
+  position: fixed;
+  background-color: greenyellow;
+  margin : 0;
+  top: 0;
+}
+/* fin exo position */
+
+/* exo position (priorité) */
+.position2{
+  z-index: 1;
+}
+.last-android{
+  background-color: blue;
+  margin-left: 100px;
+  position: absolute;
+  z-index: -2;
+}
+.last-tartine{
+  position: absolute;
+  z-index: -1;
+}
+/* fin exo position (priorité) */
