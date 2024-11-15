@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    height: 80vh;
+    background-image: url('../images/galaxy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-two, .section-three{
+    height: 55vh;
+}
+
+.section-three{
+    background-image: url('../images/header-bg-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-four{
+    height: 80vh;
+}
+
+.green{
+    color: #5BB12F;
+}
+
+.bg-green{
+    background-color: #5BB12F;
+}
+
+.fs-8{
+    font-size: 75%;
+}
