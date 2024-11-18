@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body header {
+  background-color: purple;
+  height: 5vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header img {
+  height: 100%;
+  filter: brightness(0) invert(1);
+  opacity: 50%;
+  position: absolute;
+  left: 0;
+}
+body header div {
+  display: flex;
+  justify-content: space-between;
+}
+body header div p {
+  color: white;
+  margin-right: 2px;
+}
+body header div button {
+  border-radius: 5px;
+  height: 75%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  background-color: #00E173;
+  margin-left: 2px;
+}
+body nav {
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: solid 1px lightgray;
+}
+body nav .nav-logo img {
+  width: 150px;
+}
+body nav .nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  border-left: solid 1px lightgray;
+  border-right: solid 1px lightgray;
+}
+body nav .nav-link ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+}
+body nav .nav-link ul li {
+  position: relative;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+body nav .nav-link ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #9B009D;
+  transition: 2s;
+  left: 50%;
+}
+body nav .nav-link ul li:hover::before {
+  width: 100%;
+  left: 0;
+}
+body nav .nav-try {
+  padding-right: 2%;
+}/*# sourceMappingURL=style.css.map */
