@@ -16,7 +16,7 @@ header{
     background-repeat: no-repeat;
 }
 
-.section-two, .section-three{
+.section-two, .section-three, #progress{
     height: 55vh;
 }
 
@@ -26,8 +26,12 @@ header{
     background-repeat: no-repeat;
 }
 
-.section-four{
+.section-four, #services{
     height: 80vh;
+}
+
+#about-us{
+    height: 100vh;
 }
 
 .green{
