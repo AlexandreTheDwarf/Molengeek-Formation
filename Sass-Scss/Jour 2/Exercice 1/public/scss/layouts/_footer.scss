@@ -1,0 +1,13 @@
+footer{
+    // Style
+    height: 8vh;
+    background-color: $dark-grey;
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: darkgray;
+    }
+    
+}

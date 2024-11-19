@@ -1,0 +1,19 @@
+.section-card{
+    // Style
+    height: 40vh;
+    width: 100%;
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        // Style
+        width: 70%;
+        height: 80%;
+        // Display
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

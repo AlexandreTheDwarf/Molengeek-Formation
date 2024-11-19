@@ -1,0 +1,35 @@
+.section-touch{
+    // Style
+    height: 40vh;
+    width: 100%;
+    background-color: $dark-blue;
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        // Style
+        height: 80%;
+        width: 70%;
+        color: whitesmoke;
+        opacity: 50%;
+       // Display
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; 
+        div{
+            h3{
+                font-size: 24px;
+                letter-spacing: 5px;
+            }
+            p{
+                text-align: center;
+                line-height: 1.6;
+            }
+            svg{
+                margin: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.card-two{
+    // Display
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // Style
+    background-color: $dark-grey;
+    .card-header{
+        // Style
+        width: 100%;
+        height: 60%;
+        object-fit: contain;
+        img{
+            width: 100%;
+        }
+    }
+    .card-footer{
+         // Style
+         width: 90%;
+         height: 40%;
+         color: whitesmoke;
+        //  Display
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        p{
+            text-align: center;
+            opacity: 50%;
+            font-size: 14px;
+        }
+    }
+}

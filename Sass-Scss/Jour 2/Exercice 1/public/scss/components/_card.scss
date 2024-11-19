@@ -1,0 +1,66 @@
+.card{
+    // Style
+    background-color: $card-lightgrey;
+    width: 20%;
+    height: 100%;
+    // Display
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .card-header{
+        // Style
+        width: 30%;
+        height: 20%;
+        // Display
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            // Style
+            width: 75%;
+            height: 100%;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            // Display
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{
+                fill: $dark-blue;
+            }
+        }
+    }
+    .card-body{
+        // Style
+        width: 80%;
+        height: 20%;
+        // Display
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            // Style
+            color: #26A2CC;
+            font-size: 14px;
+            padding-top: 2px;
+        }
+    }
+    .card-footer{
+        // Style
+        width: 80%;
+        height: 20%;
+        // Display
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            // Style
+            font-size: 9.5px; 
+            text-align: justify;
+            margin-bottom: 5px;
+        }
+    }
+}

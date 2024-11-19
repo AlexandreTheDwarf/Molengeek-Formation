@@ -1,0 +1,24 @@
+nav{
+    // Style
+    height: 10vh;
+    background-color: $dark-grey;
+
+    // Display
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        // Style
+        color: whitesmoke;
+        width: 10%;
+        font-size: 24px;
+        font-weight: bold;
+        // Display
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

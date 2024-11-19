@@ -1,0 +1,35 @@
+.section-quote{
+    // Style
+    background-color: $light-grey;
+    height: 30vh;
+    width: 100%;
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        // Style
+        width: 60%;
+        height: 80%;
+        // Display
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        p{
+            text-align: center;
+            font-size: 24px;
+            .span-bg{
+                background-color: $light-blue;
+                color: whitesmoke;
+                padding: 2px;
+            }
+            .span-color{
+                color: $light-blue;
+            }
+            .span-bold{
+                font-weight: bold;
+            }
+        }
+    }
+}
