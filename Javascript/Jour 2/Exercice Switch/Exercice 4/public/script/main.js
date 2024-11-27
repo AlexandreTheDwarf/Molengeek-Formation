@@ -1,6 +1,6 @@
 // Demande une valeur à l'utilisateur
 let nbr1 = prompt("Veuillez entrer un nombre :");
-let operateur = prompt("Donne moi le signe que vous voulez (+ - * /)")
+let operateur = prompt("Donne moi le signe que vous voulez (+ - * / %)")
 let nbr2 = prompt("Veuillez entrer votre second nombre :");
 
 // Conversion de l'entrée utilisateur en nombre
@@ -12,8 +12,13 @@ let result
 if(!isNaN(numberOne) && !isNaN(numberTwo)){
     switch (operateur) {
         case "/": 
-            result = numberOne/numberTwo
-            alert("la réponse de votre calcul est " + result)
+            if (numberTwo == 0){
+                alert("On ne peut pas diviser par zéro")
+            }
+            else{
+                result = numberOne/numberTwo
+                alert("la réponse de votre calcul est " + result)
+            }
             break;
     
         case "+": 
@@ -28,6 +33,11 @@ if(!isNaN(numberOne) && !isNaN(numberTwo)){
 
         case "*": 
             result = numberOne*numberTwo
+            alert("la réponse de votre calcul est " + result)
+            break;
+
+        case "%": 
+            result = numberOne%numberTwo
             alert("la réponse de votre calcul est " + result)
             break;
 
