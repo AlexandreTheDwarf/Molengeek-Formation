@@ -1,0 +1,14 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.dark{
+    background-color: slategray;
+    color: white;
+}
+
+.light{
+    background-color: whitesmoke;
+    color : black
+}
