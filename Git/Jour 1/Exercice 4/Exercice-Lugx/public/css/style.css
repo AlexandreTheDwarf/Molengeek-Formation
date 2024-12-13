@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+
+/* <!-- Header début --> */
+
+    header{
+        /* Size */
+        height: 120vh;
+        width: 100%;
+        margin: auto;
+        /* Display */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* Background */
+        background-image: url("../img/banner-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10% 10% 20% 20% / 0% 0% 20% 20% ;
+    }
+
+    /* navbar */
+
+        .navbar{
+            /* Size */
+            height: 25%;
+            width: 90%;
+            /* Display */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar > nav{
+            /* Size */
+            width: 50%;
+        }
+
+        .navbar > nav > ul{
+            /* Display */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            /* Style */
+            list-style-type: none;
+        }
+
+        /* Style of link from navbar */
+
+            .navbar > nav > ul > li > a:link{
+                /* Style */
+                color: whitesmoke;
+                text-decoration: none;
+                padding: 10px 15px 10px 15px;
+                border-radius: 15px;
+            }
+
+            .navbar > nav > ul > li > a:visited{
+                /* Style */
+                color: whitesmoke;
+                text-decoration: none;
+            }
+
+            .navbar > nav > ul > li > a:active{
+                /* Style */
+                color: whitesmoke;
+                text-decoration: none;
+            }
+
+            .navbar > nav > ul > li > a:hover{
+                /* Style */
+                color: whitesmoke;
+                text-decoration: none;
+                background-color: #1B7FF7;
+            }
+
+            /*  Special hover for sign in*/
+
+                .navbar > nav > ul > .sign-in > a:hover{
+                    /* Style */
+                    background-color: #ED616A;
+                }
+
+    /* header body (welcome and assasin's creed) */
+                
+            /* Partie de gauche avec le text */
+
+                .welcome{
+                    /* Size */
+                    height: 35%;
+                    width: 90%;
+                    /* Display */
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .welcome-text{
+                    /* Size */
+                    height: 100%;
+                    width: 50%;
+                    /* Display */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* Style */
+                    color: whitesmoke;
+                }
+
+                /* Séparation de la zone texte en 3 */
+
+                    /* header of welcome text */
+
+                        .welcome-text-header {
+                            /* Size */
+                            height: 30%;
+                            width: 90%;
+                            /* Display */
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        /* Style of h of welcome-text-header */
+                            
+                            .welcome-text-header > h2{
+                                font-size: 16px;
+                            }
+
+                            .welcome-text-header > h1{
+                                font-size: 24px;
+                                font-weight: bold;
+                            }
+
+                            .welcome-text-header > h1 > span{
+                                /* Style */
+                                background-image: url("../img/caption-dec.png");
+                                background-repeat: no-repeat;
+                                background-position: bottom;
+                                background-size: contain;
+                                padding-bottom: 5px;
+                            }
+
+                    /* body of welcome text */
+                    
+                        .welcome-text-body{
+                            /* Size */
+                            height: 30%;
+                            width: 90%;
+                            /* Display */
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        /* Style of p of welcome-text-body */
+
+                            .welcome-text-body > p{
+                                /* Style */
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+
+                    /* footer of welcome text */
+
+                        .welcome-text-footer{
+                            /* Size */
+                            height: 30%;
+                            width: 90%;
+                            /* Display */
+                            display: flex;
+                            flex-direction: row;
+                        }
+
+                        /* Style of span */
+
+                            .span-type{
+                                /* Size */
+                                height: 50%;
+                                width: 100%;
+                                /* Style */
+                                background-color: whitesmoke;
+                                color: darkgrey;
+                                border-radius: 15px;
+                                /* Display */
+                                display: flex;
+                                align-items: center;
+                                padding-left: 5px;
+                                position: relative;
+                            }
+
+                            .span-search{
+                                /* Size */
+                                height: 100%;
+                                width: 30%;
+                                /* Style */
+                                background-color: #ED616A;
+                                color: whitesmoke;
+                                border-radius: 15px;
+                                /* Display */
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding-left: 5px;
+                                position: absolute;
+                                right: 0px;
+                            }
+
+            /* Partie droite ( image ) */
+
+                .welcome > figure{
+                    /* Size */
+                    width: 25%;
+                    height: 128%;
+                    /* Display */
+                    position: relative;
+                }
+
+                .welcome > figure > img{
+                    /* Size */
+                    width: 100%;
+                    height: 100%;
+                    /* Style */
+                    border-radius: 15px;
+                }
+
+                .figcaption-price{
+                    /* Display */
+                    position: absolute;
+                    top: 15px;
+                    right: 5%;
+                    /* Style */
+                    padding: 5px 10px 5px 10px;
+                    background-color: #008AF0;
+                    color: whitesmoke;
+                    border-radius: 15px;
+                    font-weight: bold;
+                }
+
+                .ficaption-promo{
+                   /* Size */
+                   width: 80px;
+                   height: 80px;
+                   /* Display */
+                   position: absolute;
+                   bottom: -10%;
+                   left: -10%;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   /* Style */
+                   background-color: #ED616A;
+                   color: whitesmoke;
+                   border-radius: 50%;
+                   font-weight: bold; 
+                   font-size: 24px;
+                }
+
+    /* header footer (feature) */
+
+            .featured{
+                /* Size */
+                width: 90%;
+                height: 30%;
+                /* Display */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                transform: translateY(40%);
+            }
+                 
+            /* Card bottom */
+
+            .featured > div {
+                /* Size */
+                width: 20%;
+                height: 150px;
+                /* Display */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                /* Style */
+                background-color: whitesmoke;
+                border-radius: 5%;
+                z-index: 5;
+                box-shadow: 2px 2px 2px lightgray;
+            }
+
+            .featured > div > span {
+                /* Style */
+                background-color: #008AF0;
+                padding: 15px;
+                border-radius: 50%;
+                /* Display */
+                margin-bottom: 5px;
+            }
+
+/* <!-- Header fin --> */
+
+/* <!-- Section Trending début --> */
+
+/* <!-- Section Trending fin --> */
+
+/* <!-- Section Top game début --> */
+
+/* <!-- Section Top game fin --> */
+
+/* <!-- Section Categorie début --> */
+
+/* <!-- Section Categorie fin --> */
+
+/* <!-- Section Pre-Order début --> */
+
+/* <!-- Section Pre-Order fin --> */
+
+/* <!-- Footer début --> */
+
+/* <!-- Footer fin --> */
