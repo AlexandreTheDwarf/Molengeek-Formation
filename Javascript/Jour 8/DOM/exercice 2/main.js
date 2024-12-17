@@ -3,7 +3,7 @@ console.log(myBody.firstElementChild);
 console.log(myBody.lastElementChild); 
 
 let firstDiv = document.getElementsByTagName("div")[0]
-let exo4 = firstDiv.firstElementChild
+let exo4 = firstDiv.children
 console.log(exo4)
 
 let firstLi = document.getElementsByTagName("li")[0]
