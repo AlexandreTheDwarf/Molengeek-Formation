@@ -64,9 +64,9 @@ let inputExo3_2 = divExo3.querySelectorAll("input")[1]
 let buttonExo3Egal = divExo3.querySelector(".fa-equals")
 
 let buttonExo3Plus = divExo3.querySelector("button.m-1 i.fa-plus")
-let buttonExo3Minus = divExo3.querySelector(".fa-minus")
-let buttonExo3Times = divExo3.querySelector(".fa-times")
-let buttonExo3Divide = divExo3.querySelector(".fa-divide")
+let buttonExo3Minus = divExo3.querySelector("button.m-1 i.fa-minus")
+let buttonExo3Times = divExo3.querySelector("button.m-1 i.fa-times")
+let buttonExo3Divide = divExo3.querySelector("button.m-1 i.fa-divide")
 
 let Exo3Sign = divExo3.querySelector("span i"); 
 
@@ -115,6 +115,82 @@ buttonExo3Egal.addEventListener("click", () => {
             break;
         default:
             responseExo3.textContent = x * y
+            break;
+    } 
+})
+
+//  Exo 4
+
+let numbersExo4 = document.getElementById("numbersExo4")
+let divExo4 = document.getElementById("exo-4")
+
+let Exo4Button = numbersExo4.querySelectorAll("button")
+let Exo4Sign = document.getElementById("Exo4Sign") 
+let Exo4Egal = document.getElementById("Exo4Egal")
+let Response4 = document.getElementById("response4")
+
+let Exo4Input1 = Exo4Sign.parentElement.previousElementSibling
+let Exo4Input2 = Exo4Sign.parentElement.nextElementSibling
+
+let buttonExo4Plus = divExo4.querySelector("button.m-1 i.fa-plus")
+let buttonExo4Minus = divExo4.querySelector("button.m-1 i.fa-minus")
+let buttonExo4Times = divExo4.querySelector("button.m-1 i.fa-times")
+let buttonExo4Divide = divExo4.querySelector("button.m-1 i.fa-divide")
+
+buttonExo4Plus.addEventListener("click", () => {
+    Exo4Sign.className = "fas fa-plus";
+})
+
+buttonExo4Minus.addEventListener("click", () => {
+    Exo4Sign.className = "fas fa-minus";
+})
+
+buttonExo4Times.addEventListener("click", () => {
+    Exo4Sign.className = "fas fa-times";
+})
+
+buttonExo4Divide.addEventListener("click", () => {
+    Exo4Sign.className = "fas fa-divide";
+})
+
+
+Exo4Button.forEach(element => {
+    element.addEventListener("click", () => {
+        if (Exo4Input1.value == ""){
+            Exo4Input1.value = element.textContent.trim()
+        }
+        else{
+            Exo4Input2.value = element.textContent.trim()
+        }
+    })
+});
+
+Exo4Egal.addEventListener("click", () => {
+    let x = parseInt(Exo4Input1.value)
+    let y = parseInt(Exo4Input2.value)
+    let z;
+    if (Exo4Sign.classList.contains("fa-times")) z = "*";
+    else if (Exo4Sign.classList.contains("fa-minus")) z = "-";
+    else if (Exo4Sign.classList.contains("fa-divide")) z = "/";
+    else z = "+"; 
+
+    switch (z) {
+        case "+":
+            Response4.textContent = x + y
+            break;
+        case "-":
+            Response4.textContent = x - y
+            break;
+        case "/":
+            if (y != 0){
+                Response4.textContent = (x / y).toFixed(2)
+            }
+            else{
+                alert("On ne peut pas diviser par 0")
+            }
+            break;
+        default:
+            Response4.textContent = x * y
             break;
     } 
 })
