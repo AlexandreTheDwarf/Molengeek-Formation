@@ -1,0 +1,64 @@
+.NavBonus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1200px;
+
+    div{
+        width: 80%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 5px;
+
+        padding: 1em;
+
+        div{
+            width: 50%;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            label{
+                display: flex;
+                align-items: center;
+            }
+            input{
+                display: flex;
+                align-items: center;
+                border: none;
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+                background: none;
+            }
+            span{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .DivLocation{
+            border-left: solid 1px lightgrey;
+        }
+    }
+
+    button{
+        border: none;
+        background-color: rgba(243, 98, 98);
+        padding: 2.6em 3.5em;
+        color : white;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        &:hover{
+            background-color: red;
+        }
+    }
+}
