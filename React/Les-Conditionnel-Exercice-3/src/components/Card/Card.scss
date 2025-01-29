@@ -1,0 +1,50 @@
+.Card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 315px;
+    height: 445px;
+
+    background-color: white;
+    color: black;
+
+    .CardHeader{
+        width: 100%;
+        height: 5%;
+        color: black;
+        background-color: red;
+    }
+
+    .CardBody{
+        width: 100%;
+        height: 95%;
+        background-color: chartreuse;
+
+        .CardBodyTop{
+            height: 50%;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .CardBodyCenter{
+            height: 10%;
+            width: 95%;
+        }
+
+        .CardBodyFooter{
+            width: 95%;
+            height: 40%;
+            position: relative;
+
+            span{
+                position: absolute;
+                right : -5%;
+                bottom : -5%;
+            }
+        }
+    }
+}

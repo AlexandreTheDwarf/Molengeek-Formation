@@ -1,0 +1,21 @@
+.SearchBar{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    label{
+        color: whitesmoke;
+        font-size: 22px;
+    }
+
+    input{
+        padding: 0.50em 1em;
+    }
+
+    button{
+        color: whitesmoke;
+        background-color: #34EEBF;
+        padding: 0.25em 1em;
+        font-size: 18px;
+    }
+}
