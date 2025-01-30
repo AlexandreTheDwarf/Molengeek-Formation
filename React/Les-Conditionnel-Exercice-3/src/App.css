@@ -1,6 +1,8 @@
-.CardContainer{
-  margin : 2em auto;
-  width: 100%;
+.CardContainer {
+  margin: 2em auto;
+  max-width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em; /* Ajoute de l'espace entre les cartes */
+  justify-content: center;
 }
