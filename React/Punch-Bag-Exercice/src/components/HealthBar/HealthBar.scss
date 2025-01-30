@@ -1,0 +1,15 @@
+.HealthBar{
+    width: 500px;
+    height: 30px;
+    border: solid 2px black;
+    background-color: whitesmoke;
+
+    .HealthBar__fill{
+        height: 100%;
+        background-color: red;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
