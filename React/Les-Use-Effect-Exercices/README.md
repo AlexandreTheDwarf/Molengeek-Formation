@@ -10,11 +10,11 @@ Avant de commencer, assurez-vous d'avoir Node.js et npm installés sur votre mac
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/react-exercices.git
+   git clone https://github.com/AlexandreTheDwarf/Molengeek-Formation/tree/main/React/Les-Use-Effect-Exercices
    ```
 2. Accédez au dossier du projet :
    ```bash
-   cd react-exercices
+   cd Les-Use-Effect-Exercices
    ```
 3. Installez les dépendances :
    ```bash
