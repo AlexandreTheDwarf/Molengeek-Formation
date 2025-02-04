@@ -1,0 +1,45 @@
+.Exo3 {
+    width: 500px;
+    height: 50px;
+    background-color: whitesmoke;
+    border: solid 2px black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .ProgressLeft{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 1s ease-in-out;
+
+        .spanProgressLeft {
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            transition: background 1s ease-in-out; // Animation fluide
+          }
+    }
+
+  
+    .Progress {
+        height: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 1s ease-in-out;
+  
+        .spanProgress {
+            width: 100%;
+            color: whitesmoke;
+            text-align: center;
+            font-weight: bold;
+            transition: background 1s ease-in-out; // Animation fluide
+        }
+    }
+  }
+  

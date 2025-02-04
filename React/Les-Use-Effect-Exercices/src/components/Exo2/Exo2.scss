@@ -1,0 +1,74 @@
+.Exo2{
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+    border: solid 2px black;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+    .RoundTop{
+        width: 100%;
+        height: 31%;
+        background-color: whitesmoke;
+
+    }
+
+    .RoundBody{
+        width: 100%;
+        height: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .Afficheur{
+            width: 50%;
+            height: 80%;
+
+            background-color: black;
+            color: whitesmoke;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    .RoundBot{
+        width: 100%;
+        height: 31%;
+        background-color: whitesmoke;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .PlayButton{
+            width: 25%;
+            height: 80%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                width: 80%;
+                height: 80%;
+
+                cursor: pointer;
+            }
+        }
+
+    }
+}
