@@ -1,0 +1,34 @@
+.template{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    header{
+        width: 100%;
+        height: 10vh;
+
+        background-color: #2B3743;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div{
+            padding: 0 2em;
+            color: white;
+
+            h1{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: 75%;
+    }
+}

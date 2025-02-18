@@ -1,0 +1,8 @@
+.CardList{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 2em auto; // Centrage horizontal
+    justify-content: space-between; // Aligne les éléments au centre si moins de 4 colonnes
+}
