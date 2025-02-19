@@ -1,50 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import "./Home.scss";
-import NavBar from '../../components/NavBar/NavBar'
 import DefaultTemplate from '../../templates/DefaultTemplate';
 import { getAllCountryData } from '../../api/fetchApi';
 import CardList from '../../components/CardList/CardList';
+import NavBar from '../../components/NavBar/NavBar';
+import "./Home.scss";
 
-function Home() {
+function Home({ darkMode, setDarkMode }) {
     const [countryData, setCountryData] = useState([]);
+    const [filteredCountries, setFilteredCountries] = useState([]);
     const [errorApi, setErrorApi] = useState(null);
 
     useEffect(() => {
-        const controller = new AbortController(); 
-
         async function fetchCountryData() {
             try {
                 const response = await getAllCountryData();
-                setCountryData(response);  // Correction ici (pas `response.products`)
+                setCountryData(response);
+                setFilteredCountries(response); // Par défaut, afficher tous les pays
             } catch (error) {
                 console.log(error.message);
                 setErrorApi(error);
-
-                let popupError = document.querySelector('.popupError');
-                if (popupError) {  
-                    let pop = document.createElement('div');
-                    pop.textContent = error.message;
-                    pop.classList.add("pop");
-                    popupError.appendChild(pop);
-                    setTimeout(() => pop.remove(), 5000);
-                }
             }
         }
-
         fetchCountryData();
-
-        return () => controller.abort();
     }, []);
 
+    // Gérer la recherche
+    const handleSearch = (query) => {
+        const filtered = countryData.filter(country => 
+            country.name.common.toLowerCase().includes(query.toLowerCase())
+        );
+        setFilteredCountries(filtered);
+    };
+
+    // Gérer le filtre par région
+    const handleFilter = (region) => {
+        if (region === "All") {
+            setFilteredCountries(countryData);
+        } else {
+            const filtered = countryData.filter(country => 
+                country.region === region
+            );
+            setFilteredCountries(filtered);
+        }
+    };
+
     return (
-        <DefaultTemplate>
-            <section className='Home'>
-                <NavBar/>
-                <div className="popupError"></div>
+        <DefaultTemplate darkMode={darkMode} setDarkMode={setDarkMode}>
+            <section className={darkMode ? "home Dark" : "home Light"}>
+                <NavBar onSearch={handleSearch} onFilter={handleFilter} darkMode={darkMode}/>
                 {errorApi ? (
                     <p>Erreur lors de la récupération des données.</p>
                 ) : (
-                    <CardList countries={countryData} />
+                    <CardList countries={filteredCountries}  darkMode={darkMode}/>
                 )}
             </section>
         </DefaultTemplate>

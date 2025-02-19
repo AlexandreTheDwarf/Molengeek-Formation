@@ -3,3 +3,19 @@ body{
   min-height: 100vh;
   margin: 0;
 }
+
+#root{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.Dark{
+  background-color: #202D36;
+  color: whitesmoke;
+}
+
+.Light{
+  background-color: white;
+  color : #202D36;
+}

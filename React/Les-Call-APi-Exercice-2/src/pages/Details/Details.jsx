@@ -5,7 +5,7 @@ import "./Details.scss";
 import DefaultTemplate from '../../templates/DefaultTemplate';
 import { getAllCountryData } from '../../api/fetchApi';
 
-function Details() {
+function Details({ darkMode, setDarkMode }) {
     const { id } = useParams(); // Récupérer l'ID du pays depuis l'URL
     const navigate = useNavigate();
     const [country, setCountry] = useState(null);
@@ -41,8 +41,8 @@ function Details() {
     };
 
     return (
-        <DefaultTemplate>
-            <section className='Details'>
+        <DefaultTemplate darkMode={darkMode} setDarkMode={setDarkMode}>
+            <section className={darkMode ? "Details Dark" : "Details Light"}>
                 <div className='Nav'>
                     <button onClick={() => navigate(-1)}>
                         <FaLongArrowAltLeft /> Back

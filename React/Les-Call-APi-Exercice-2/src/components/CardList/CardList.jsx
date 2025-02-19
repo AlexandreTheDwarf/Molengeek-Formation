@@ -2,11 +2,12 @@ import React from 'react';
 import Card from '../Card/Card';
 import "./CardList.scss";
 
-function CardList({ countries }) {
+function CardList({ countries, darkMode }) {
   return (
     <div className="CardList">
       {countries.map((country) => (
-        <Card
+        <Card 
+          darkMode={darkMode}
           key={country.cca3}
           id={country.cca3} // ID unique pour l'URL
           name={country.name.common}

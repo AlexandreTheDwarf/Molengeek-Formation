@@ -18,13 +18,12 @@
         justify-content: space-between;
         align-items: center;
 
-        background-color: #2B3743;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         svg{
             display: flex;
             justify-content: center;
             align-items: center;
-            fill: white;
             padding-left: 2.5em;
         }
 
@@ -35,16 +34,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
-            background-color: #2B3743;
+ 
             border: none;
 
-            color: whitesmoke;
             padding: 1em;
 
             &::placeholder {
-                color: whitesmoke;
                 padding: 1em;
+            }
+        }
+    }
+    .Dark{
+        background-color: #2B3743;
+
+        svg{
+            fill: white;
+        }
+        input{
+            background-color: #2B3743;
+            color: whitesmoke;
+
+            &::placeholder{
+                color: whitesmoke;
+            }
+        }
+    }
+    .Light{
+        background-color: white;
+        border: solid 1px #2B3743;
+
+        svg{
+            fill: #2B3743;
+        }
+        input{
+            background-color: white;
+            color: #2B3743;
+
+            &::placeholder{
+                color: #2B3743;
             }
         }
     }
@@ -52,16 +79,13 @@
         width: 15%;
         height: 100%;
 
-        background-color: #2B3743;
+        z-index: 5;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         button{
             width: 100%;
             height: 100%;
-
-            background-color: #2B3743;
-            color: whitesmoke;
-            border: none;
-
             cursor: pointer;
         }
         div{
@@ -71,15 +95,12 @@
             align-items: center;
 
             margin-top: 2px;
-            background-color: #2B3743;
             
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
             span{
                 width: 100%;
                 height: 20%;
-
-                background-color: #2B3743;
-                color: whitesmoke;
 
                 display: flex;
                 justify-content: center;
@@ -88,6 +109,40 @@
                 padding: 0.75em 0;
 
                 cursor: pointer;
+            }
+        }
+    }
+    .Dark{
+        background-color: #2B3743;
+
+        button{
+            background-color: #2B3743;
+            color: whitesmoke;
+            border: none;
+        }
+        div{
+            background-color: #2B3743;
+
+            span{
+                background-color: #2B3743;
+                color: whitesmoke;
+            }
+        }
+    }
+    .Light{
+        background-color: white;
+
+        button{
+            background-color: white;
+            color: #2B3743;
+            border: solid 1px #2B3743;
+        }
+        div{
+            background-color: white;
+
+            span{
+                background-color: white;
+                color: #2B3743;
             }
         }
     }
