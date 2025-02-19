@@ -1,8 +1,36 @@
-# React + Vite
+# Les-Call-APi-Exercice-2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet fait partie de mon apprentissage à Molengeek. Il s'agit d'un exercice sur les appels API en React.
 
-Currently, two official plugins are available:
+## Objectif
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Apprendre à faire des requêtes API avec `fetch` ou `axios`.
+- Afficher les données récupérées dans un composant React.
+- Gérer le chargement et les erreurs lors des requêtes.
+
+## Installation et utilisation
+
+1. **Cloner le projet**  
+   ```bash
+   git clone https://github.com/AlexandreTheDwarf/Molengeek-Formation.git
+   cd Molengeek-Formation/React/Les-Call-APi-Exercice-2
+   ```
+
+2. **Installer les dépendances**  
+   ```bash
+   npm install
+   ```
+
+3. **Lancer l'application**  
+   ```bash
+   npm start
+   ```
+
+Puis ouvrez `http://localhost:3000` dans votre navigateur.
+
+## Technologies utilisées
+
+- React
+- Fetch API / Axios
+
+
