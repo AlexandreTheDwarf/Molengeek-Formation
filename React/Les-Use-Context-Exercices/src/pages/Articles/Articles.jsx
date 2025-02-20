@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PaginationContext from './context/PaginationContext';
+import { PaginationContext } from "../../context/paginationContext";
 
 function Articles() {
   const { articlesPerPage, currentPage, changePage } = useContext(PaginationContext);

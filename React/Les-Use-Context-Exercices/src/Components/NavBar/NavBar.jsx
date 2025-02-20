@@ -8,6 +8,7 @@ function NavBar() {
             <li><Link to={'/'}>home</Link></li>
             <li><Link to={'/inscription'}>inscription</Link></li>
             <li><Link to={'/todolist'}>ToDoList</Link></li>
+            <li><Link to={'/articles'}>Articles</Link></li>
         </ul>
     </nav>
   )

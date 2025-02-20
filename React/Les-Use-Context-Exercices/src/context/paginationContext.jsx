@@ -8,22 +8,25 @@ const PaginationContext = createContext({
 });
 
 const PaginationContextProvider = ({ children }) => {
-    const [articlesPerPage, setArticlesPerPage] = useState(10);
-    const [currentPage, setCurrentPage] = useState(1);
-  
-    const changePage = (pageNumber) => {
-      setCurrentPage(pageNumber);
-    };
-  
-    return (
-      <PaginationContext.Provider value={{
+  const [articlesPerPage, setArticlesPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const changePage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  return (
+    <PaginationContext.Provider
+      value={{
         articlesPerPage,
         currentPage,
         changePage,
-      }}>
-        {children}
-      </PaginationContext.Provider>
-    );
-  };
-  
-  export { PaginationContextProvider };
+      }}
+    >
+      {children}
+    </PaginationContext.Provider>
+  );
+};
+
+// ✅ Ajout de l'export de PaginationContext
+export { PaginationContext, PaginationContextProvider };
