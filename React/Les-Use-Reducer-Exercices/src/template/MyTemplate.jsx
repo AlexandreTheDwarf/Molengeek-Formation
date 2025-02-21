@@ -6,7 +6,7 @@ function MyTemplate({children}) {
   return (
     <section className='MyTemplate'>
         <NavBar/>
-        <div>
+        <div className='container'>
             {children}
         </div>
     </section>

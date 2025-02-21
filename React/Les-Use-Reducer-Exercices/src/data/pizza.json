@@ -26,5 +26,47 @@
         "description": "Vegetarian pizza with bell peppers, onions, olives, and mushrooms.",
         "imageUrl": "/Veggie.jpg",
         "price": 10.00
+    },
+    {
+        "id": 5,
+        "name": "BBQ Chicken",
+        "description": "Pizza with BBQ sauce, chicken, red onions, and mozzarella cheese.",
+        "imageUrl": "/BBQChicken.jpg",
+        "price": 10.50
+    },
+    {
+        "id": 6,
+        "name": "Four Cheese",
+        "description": "Pizza with a blend of four cheeses: mozzarella, cheddar, gorgonzola, and parmesan.",
+        "imageUrl": "/FourCheese.jpg",
+        "price": 8.00
+    },
+    {
+        "id": 7,
+        "name": "Mushroom & Truffle",
+        "description": "Gourmet pizza with mushrooms, truffle oil, and mozzarella cheese.",
+        "imageUrl": "/Mushroom&Truffle.jpg",
+        "price": 20.00
+    },
+    {
+        "id": 8,
+        "name": "Buffalo Chicken",
+        "description": "Spicy pizza with buffalo chicken, blue cheese, and mozzarella.",
+        "imageUrl": "BuffaloChicken.jpg",
+        "price": 11.50
+    },
+    {
+        "id": 9,
+        "name": "Supreme",
+        "description": "Loaded pizza with pepperoni, sausage, bell peppers, onions, and olives.",
+        "imageUrl": "/Supreme.jpg",
+        "price": 12.50
+    },
+    {
+        "id": 10,
+        "name": "Marinara",
+        "description": "Simple pizza with tomato sauce, garlic, oregano, and olive oil.",
+        "imageUrl": "/Marinara.webp",
+        "price": 8.00
     }
 ]

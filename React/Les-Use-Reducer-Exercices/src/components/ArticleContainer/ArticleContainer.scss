@@ -1,9 +1,10 @@
 .ArticleContainer{
-    width: 100%;
+    width: 80%;
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
 
-    margin-top: 3em;
+    margin: 3em auto;
 }
