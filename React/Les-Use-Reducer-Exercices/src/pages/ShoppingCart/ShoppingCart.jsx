@@ -55,6 +55,13 @@ function ShoppingCart() {
           <Link to="/" className='Modify'>Modifier la commande</Link>
           <p>Total : €{total.toFixed(2)}</p>
         </div>
+        {
+        cartItems.length === 0 
+        ? 
+        ""
+        :
+        <Link to="/resume" className='resume'>Finaliser la commande</Link>
+        }
       </section>
     </MyTemplate>
   );
