@@ -1,6 +1,8 @@
 # Exo Boucle du Jour 2 de python :
 
-## Trouver le nombre avec avec arrêt prématuré
+## While
+
+### Trouver le nombre avec avec arrêt prématuré
 
 - Générez un nombre aléatoire entre 1 et 100.
 - Demandez à l'utilisateur de deviner le nombre.
@@ -8,20 +10,20 @@
 - Si l'utilisateur entre -1, arrêtez la boucle prématurément.
 - Sinon, indiquez si le nombre à deviner est plus grand ou plus petit que la proposition de l'utilisateur. si le nombre est séparer de moins de 10 point mettez un message différent
 
-## Calcul de la somme d'une série de nombres
+### Calcul de la somme d'une série de nombres
 
 - Demandez à l'utilisateur d'entrer des nombres un par un.
 - Utilisez une boucle while pour continuer à demander des nombres jusqu'à ce que l'utilisateur entre 0.
 - Calculez la somme de tous les nombres entrés et affichez le résultat.
 - n’utilisez pas de liste ni de manipulation de string
 
-## Compte à rebours avec pause
+### Compte à rebours avec pause
 
 - Créez un compte à rebours à partir d'un nombre donné par l'utilisateur.
 - Utilisez une boucle while pour décrementer le nombre et l'afficher.
 - Ajoutez une pause d'une seconde entre chaque affichage (utilisez le module time).
 
-## Billet de banque
+### Billet de banque
 
 - L'utilisateur entre le montant qu'il souhaite retirer.
 - Le distributeur dispose d'un nombre limité de billets de différentes coupures (par exemple, 100€, 50€, 20€, 10€, 5€). Définissez ces quantités initialement dans votre programme dans des variables séparées (pas de liste).
