@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { PaginationContext } from "../../context/paginationContext";
+import NavBar from '../../Components/NavBar/NavBar';
 
 function Articles() {
   const { articlesPerPage, currentPage, changePage } = useContext(PaginationContext);
@@ -14,6 +15,7 @@ function Articles() {
 
   return (
     <div className='Articles'>
+      <NavBar/>
       <h1>Liste des Articles</h1>
       <ul>
         {currentArticles.map((article, index) => (
