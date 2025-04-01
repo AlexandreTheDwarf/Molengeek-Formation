@@ -33,3 +33,23 @@
 - Utilisez une boucle while pour itérer sur les différentes coupures de billets tant qu'il reste un montant à distribuer et des billets de cette coupure disponibles.
 - Si le montant n’est pas divisible par 5 il est arrondie au supérieur.
 
+## For :
+
+exo boucle FOR:
+
+### exo 5
+Demandez à l’utilisateur d’entrez un nombre positif supérieur à 2
+Pour chaque nombre entre 1 et ce nombre, vérifier que ce nombre est un nombre premier et si c’est le cas, affichez le
+
+### exo 6
+Écrivez un code qui utilise des boucles for imbriquées pour afficher le motif numérique suivant (ou un motif similaire plus complexe de votre conception) sans utiliser de listes pour stocker les nombres ou les lignes :
+
+```
+        1
+      2 3 2
+    3 4 5 4 3
+5 6 7 8 9 8 7 6 5
+```
+
+Vous devrez déterminer la logique pour générer les nombres et les espaces en fonction du numéro de la ligne.
+Utilisez des boucles for pour contrôler le nombre d'espaces au début de chaque ligne et les nombres à afficher.
