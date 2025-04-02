@@ -1,5 +1,5 @@
 # Nombre total de lignes dans le motif
-nombre_de_lignes = 4
+nombre_de_lignes = 5
 
 # Boucle sur chaque ligne
 for i in range(1, nombre_de_lignes + 1):
