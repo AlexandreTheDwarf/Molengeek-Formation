@@ -1,4 +1,5 @@
 # coding: utf-8
+from colorama import Fore, Back, Style
 
 import sqlite3
 
@@ -31,7 +32,7 @@ while True:
         print("help : Afficher cette liste de commandes.")
 
     if commande == "init_db":
-        cursor.execute("""
+        cursor.execute(""".
         CREATE TABLE IF NOT EXISTS users(
             id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
             name TEXT,
