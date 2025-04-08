@@ -19,7 +19,7 @@ def getGalleryTitle(galleryUrl):
         response = requests.get(galleryUrl)
         noStratchSoupe = bs4.BeautifulSoup(response.text, "html.parser")
         title = noStratchSoupe.select("#game_info h1")[0].contents[0]
-        print(title)
+        return(title)
     except Exception as e:
         print("<--Error during request in getGalleryTitle -->", e)
     
@@ -81,6 +81,17 @@ def downloadImg(url, imgName="")->bool:
 def downloadAllImgByGallery(url, imgName="") -> bool:
     currentUrl = getFirstUrl(url)
     
+    galleryTitle = getGalleryTitle(url)
+
+    if not galleryTitle:
+        print("Impossible de récupérer le titre de la galerie.")
+        return False
+    folderPath = os.path.join(OUTPUT_PATH, galleryTitle)
+
+    # 2. Créer le dossier s'il n'existe pas
+    if not os.path.exists(folderPath):
+        os.makedirs(folderPath)
+
     if not currentUrl:
         print("Impossible de récupérer la première URL.")
         return False
@@ -98,7 +109,17 @@ def downloadAllImgByGallery(url, imgName="") -> bool:
     print("Toutes les images ont été téléchargées.")
     return True
 
+def getAllGameName()->dict:
+    #prend le nom et l'url a partir de l'url de https://www.creativeuncut.com/game-art-galleries.html
+    pass
+
+def getRandomGallery():
+    # propose une gallery aleatoirement et demande a le telecharger oui ou non ?
+    pass
+
 # print(getImgUrl("https://www.creativeuncut.com/gallery-48/mkw-world-map.html", ""))
 # print(downloadImg(getImgUrl("https://www.creativeuncut.com/gallery-48/mkw-world-map.html", "")))
 
 downloadAllImgByGallery("https://www.creativeuncut.com/art_mario-kart-world_a.html", "")
+
+# print(getGalleryTitle("https://www.creativeuncut.com/art_mario-kart-world_a.html"))
