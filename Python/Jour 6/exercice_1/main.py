@@ -159,4 +159,7 @@ def getRandomGallery():
 
 # Lancement principal
 if __name__ == "__main__":
+    # downloadAllImgByGallery("https://www.creativeuncut.com/art_mario-kart-world_a.html" , "")
+    # downloadAllImgByGallery("https://www.creativeuncut.com/art_elden-ring_a.html" , "")
     getRandomGallery()
+    
