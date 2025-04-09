@@ -1,4 +1,5 @@
 import requests, bs4, os, re
+import tempfile
 from PyPDF2 import PdfMerger, PdfWriter
 import img2pdf
 
@@ -109,6 +110,15 @@ def downloadAllImgByGallery(url, imgName="") -> bool:
         currentUrl = getNextUrl(currentUrl)
 
     print("Toutes les images ont été téléchargées.")
+    # Convertir les images téléchargées en un fichier PDF
+    pdfOutputPath = os.path.join(folderPath, f"{safeTitle}.pdf")
+    convertImgToPdf(folderPath, output=pdfOutputPath)
+    print(f"PDF créé à l'emplacement : {pdfOutputPath}")
+
+    # Supprimer toutes les images après la création du PDF
+    deleteAllImagesInFolder(folderPath)
+    print("Toutes les images ont été supprimées après la création du PDF.")
+
     return True
 
 # Récupérer toutes les galeries disponibles (non utilisé ici mais utile pour la suite)
@@ -157,9 +167,45 @@ def getRandomGallery():
     except Exception as e:
         print("<-- Error during getRandomGallery -->", e)
 
+def convertImgToPdf (folder_path, output="output.pdf"):
+    image_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.lower().endswith(('.png', ".jpeg", ".jpg"))]
+    merger = PdfMerger()
+    for image in image_files:
+        try:
+            with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as temp_file:
+                temp_file.write(img2pdf.convert([image]))
+                temp_file.flush()
+            merger.append(temp_file.name)
+        except Exception as e:
+            print(f"error during pdf creation : {e}")
+    merger.write(output)
+    merger.close()
+
+def deleteAllImagesInFolder(folder_path):
+    """
+    Supprime toutes les images dans le dossier spécifié.
+
+    :param folder_path: Chemin du dossier contenant les images à supprimer.
+    """
+    # Liste des extensions d'images à supprimer
+    image_extensions = ('.png', '.jpeg', '.jpg')
+
+    # Parcourir tous les fichiers dans le dossier
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+
+        # Vérifier si le fichier est une image en fonction de son extension
+        if file_path.lower().endswith(image_extensions):
+            try:
+                os.remove(file_path)
+                print(f"Supprimé : {file_path}")
+            except Exception as e:
+                print(f"Erreur lors de la suppression de {file_path} : {e}")
+
+
 # Lancement principal
 if __name__ == "__main__":
-    # downloadAllImgByGallery("https://www.creativeuncut.com/art_mario-kart-world_a.html" , "")
+    downloadAllImgByGallery("https://www.creativeuncut.com/art_mario-kart-world_a.html" , "")
     # downloadAllImgByGallery("https://www.creativeuncut.com/art_elden-ring_a.html" , "")
-    getRandomGallery()
+    # getRandomGallery()
     
