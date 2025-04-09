@@ -134,6 +134,8 @@ def getAllGameNames() -> dict:
             href = link.get("href")
             if href and name:
                 full_url = WEBSITE_PATH + href
+                if name.lower().endswith("The"):
+                    name = "The" + name[:-3]
                 allGames[name] = full_url
         return allGames
     except Exception as e:
@@ -202,10 +204,68 @@ def deleteAllImagesInFolder(folder_path):
             except Exception as e:
                 print(f"Erreur lors de la suppression de {file_path} : {e}")
 
+# Recherche des jeux dont le nom contient le terme de recherche et retourne un dictionnaire des résultats.
+def searchGame(game_name: str) -> dict:
+
+    all_games = getAllGameNames()
+    matching_games = {}
+
+    # Rechercher les jeux dont le nom contient le terme de recherche (insensible à la casse)
+    for name, url in all_games.items():
+        if game_name.lower() in name.lower():
+            matching_games[name] = url
+
+    # Si aucun jeu n'est trouvé
+    if not matching_games:
+        print(f"Aucune galerie trouvée pour le terme de recherche : {game_name}")
+
+    return matching_games
+
 
 # Lancement principal
+def main():
+    while True:
+        print("\nOptions disponibles :")
+        print("1. Télécharger toutes les images d'une galerie (DL)")
+        print("2. Obtenir le titre d'une galerie (getTitle)")
+        print("3. Obtenir toutes les galeries disponibles (getAllGames)")
+        print("4. Rechercher un jeu (searchGame)")
+        print("5. Obtenir une galerie aléatoire (randomGallery)")
+        print("6. Quitter (quit)")
+
+        choice = input("Entrez votre choix : ").strip().lower()
+
+        if choice == "dl":
+            url = input("Entrez l'URL de la galerie : ").strip()
+            downloadAllImgByGallery(url)
+
+        elif choice == "gettitle":
+            url = input("Entrez l'URL de la galerie : ").strip()
+            title = getGalleryTitle(url)
+            if title:
+                print(f"Titre de la galerie : {title}")
+
+        elif choice == "getallgames":
+            games = getAllGameNames()
+            for name, url in games.items():
+                print(f"Jeu : {name}, URL : {url}")
+
+        elif choice == "searchgame":
+            game_name = input("Entrez le nom du jeu à rechercher : ").strip()
+            matching_games = searchGame(game_name)
+            if matching_games:
+                for name, url in matching_games.items():
+                    print(f"Jeu : {name}, URL : {url}")
+
+        elif choice == "randomgallery":
+            getRandomGallery()
+
+        elif choice == "quit":
+            print("Au revoir !")
+            break
+
+        else:
+            print("Choix invalide. Veuillez réessayer.")
+
 if __name__ == "__main__":
-    downloadAllImgByGallery("https://www.creativeuncut.com/art_mario-kart-world_a.html" , "")
-    # downloadAllImgByGallery("https://www.creativeuncut.com/art_elden-ring_a.html" , "")
-    # getRandomGallery()
-    
+    main()
