@@ -43,7 +43,6 @@ def move_files():
             return
     
     messagebox.showinfo("Succès", "Fichiers déplacés avec succès.")
-    browse_files()  # Pour rafraîchir la liste
 
 def compress_files():
     dest_folder = entry.get().strip()
