@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    
+<h1>{{ product.name }}</h1>
+<h2>for {{ product.price }} €</h2>
+
+<a href="{% url 'updateProduct' product.id %}">Update Product</a>
+<br>
+<form action="{% url 'destroyProduct' product.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-danger">Delete</button>
+</form>
+<br>
+<a href="{% url 'allProducts' %}">Return to All Products</a>
+
+{% endblock content %}

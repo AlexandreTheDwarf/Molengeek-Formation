@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Mes projets</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for projet in projets %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/{{ projet.image_id }}/300/200" loading="lazy" class="card-img-top" alt="{{ projet.titre }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ projet.titre }}</h5>
+                    <p class="card-text">{{ projet.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

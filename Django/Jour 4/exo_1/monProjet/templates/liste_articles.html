@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des articles</title>
+</head>
+<body>
+    <h1>Articles du blog</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <strong>{{ article.titre }}</strong><br>
+                Par {{ article.auteur }} le {{ article.publicationDate }}<br>
+                {{ article.contenu }}
+            </li>
+        {% empty %}
+            <li>Aucun article pour le moment.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

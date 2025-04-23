@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Liste des membres</h1>
+    <a href="{% url 'add_pokemon' %}">Add Pokémon</a>
+    <ul>
+        {% for pokemon in pokemons %}
+            <li>{{ pokemon.pokemon_name }} ({{ pokemon.type_name }}) - Level {{ pokemon.level }}</li>
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {{ message }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>COLOR</th>
+        <th>QUANTITY</th>
+        <th>OPTION</th>
+    </tr>
+    <tbody>
+        {% for product in all_product %}
+          <tr class="{% if product.quantity == 0 %} disable {% endif %}" >
+            <th>{{ product.name }}</th>
+            <th>{{ product.price }} €</th>
+            <th style="background-color:{{ product.color }};">{{ product.color }}</th>
+            <th>{{ product.quantity }}</th>
+            <th>
+                <a href="{% url 'detailProduct' product.id %}">detail</a>
+            </th>
+          </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'createProduct' %}">create product</a>
+
+<style>
+    .disable {
+        opacity: 0.5;
+    }
+    .messages {
+        list-style: none;
+        padding: 0;
+    }
+    .messages li {
+        background: #d4edda;
+        color: #155724;
+        padding: 10px;
+        border: 1px solid #c3e6cb;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+</style>
+
+{% endblock content %}

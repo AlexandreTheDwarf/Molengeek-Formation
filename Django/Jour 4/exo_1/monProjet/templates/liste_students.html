@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des étudiants</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .students-cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .math { background-color: #ffcccc; }
+        .info { background-color: #ccffcc; }
+        .physique { background-color: #ccccff; }
+        .bio { background-color: #ffcc99; }
+        .chimie { background-color: #ffffcc; }
+    </style>
+</head>
+<body>
+    <h2>Étudiants par classe</h2>
+    {% for classe, students in students_by_class.items %}
+        <h3>{{ classe }}</h3>
+        <div class="students-cards">
+            {% for student in students %}
+                <div class="card {{ classe|lower }}">
+                    <h4>{{ student.prenom }} {{ student.nom }}</h4>
+                    <p>Age: {{ student.age }} | Genre: {{ student.genre.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <h2>Étudiants par genre</h2>
+    {% for gender, students in students_by_gender.items %}
+        <h3>{{ gender }}</h3>
+        <div class="students-cards">
+            {% for student in students %}
+                <div class="card">
+                    <h4>{{ student.prenom }} {{ student.nom }}</h4>
+                    <p>Age: {{ student.age }} | Classe: {{ student.classe }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <h2>Étudiants par ordre croissant d'âge</h2>
+    <div class="students-cards">
+        {% for student in students_by_age %}
+            <div class="card">
+                <h4>{{ student.prenom }} {{ student.nom }}</h4>
+                <p>Age: {{ student.age }} | Classe: {{ student.classe }} | Genre: {{ student.genre.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Tableau de tous les étudiants</h2>
+    <table border="1">
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Genre</th>
+            <th>Classe</th>
+        </tr>
+        {% for student in all_students %}
+            <tr>
+                <td>{{ student.prenom }}</td>
+                <td>{{ student.nom }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.genre.name }}</td>
+                <td>{{ student.classe }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

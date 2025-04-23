@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock title %}
+{% block content %}
+    <h1 class="text-center">Bienvenue sur mon site</h1>
+{% endblock content %}
+
+{% comment %} {% extends 'base.html' %}
+{% block content %}
+
+    <div class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+
+        <h1 class="text-3xl font-bold text-center text-white bg-red-500 py-4 rounded-lg shadow-md">
+            {{ message }}
+        </h1>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">🛒 Liste de courses :</h2>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                {% for item in liste_courses %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">🎓 Étudiants :</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {% for etu in etudiants %}
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                        <p class="text-lg font-bold text-gray-900">{{ etu.prenom }} {{ etu.nom }}</p>
+                        <p class="text-gray-600">Âge : {{ etu.age }} ans</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+    </div>
+
+{% endblock content %} {% endcomment %}
+
+
+
