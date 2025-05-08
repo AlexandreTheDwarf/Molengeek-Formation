@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mailer'
+    'mailer',
+    'authentification',
+    'rest_framework',  
+    'rest_framework.authtoken',  # pour gérer le token
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'authentification.middleware.AdminRequiredMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -121,3 +127,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+AUTH_USER_MODEL = 'authentification.CustomUser'
+
+# Paramètres d'email pour l'envoi
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailtrap.io'  # Ou ton propre serveur SMTP
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'ton_email@mailtrap.io'
+EMAIL_HOST_PASSWORD = 'ton_mot_de_passe'
+DEFAULT_FROM_EMAIL = 'webmaster@tonsite.com'
