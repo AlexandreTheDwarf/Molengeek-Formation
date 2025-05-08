@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Product
-from .form import ProductForm
+from .models import Product, Galerie
+from .form import ProductForm, GalerieForm
 # Create your views here.
 
 def get_all_product(request):
@@ -37,3 +37,17 @@ def delete_product(request, id):
         messages.success(request, f"Produit supprimé avec succès.")
         return redirect("allProducts")
     return redirect("detailProduct", id=id)
+
+def all_galeries(request):
+    galeries = Galerie.objects.all()
+    return render(request, 'all_galeries.html', {'galeries': galeries})
+
+def create_galerie(request):
+    if request.method == 'POST':
+        form = GalerieForm(request.POST, request.FILES)  # important !
+        if form.is_valid():
+            form.save()
+            return redirect('allGaleries')  # ou une autre page
+    else:
+        form = GalerieForm()
+    return render(request, 'create_galerie.html', {'form': form})

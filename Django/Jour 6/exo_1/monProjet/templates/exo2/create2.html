@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un Président et un Pays</title>
+    <script>
+        function togglePaysForm() {
+            var paysForm = document.getElementById('pays-form');
+            // Si le formulaire est actuellement caché, on l'affiche, et vice-versa
+            if (paysForm.style.display === 'none') {
+                paysForm.style.display = 'block';
+            } else {
+                paysForm.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Créer un Président</h1>
+
+    <!-- Formulaire pour créer un président -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ president_form.as_p }}
+        <button type="submit" name="president_form">Créer le Président</button>
+    </form>
+
+    <hr>
+
+    <!-- Bouton pour afficher le formulaire de création de pays -->
+    <button onclick="togglePaysForm()">Ajouter un pays</button>
+
+    <!-- Formulaire pour créer un pays (caché par défaut) -->
+    <div id="pays-form" style="display: none;">
+        <h2>Créer un pays</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ pays_form.as_p }}
+            <button type="submit" name="pays_form">Créer le pays</button>
+        </form>
+    </div>
+
+    <br>
+    <a href="{% url 'index' %}">Retour à la liste des présidents</a>
+</body>
+</html>

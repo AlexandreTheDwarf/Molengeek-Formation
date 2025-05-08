@@ -43,7 +43,7 @@ def create_django_app(project_path, app_name):
     print(f"Django app '{app_name}' created.")
 
 def add_app_to_installed_apps(project_path, app_name):
-    settings_path = os.path.join(project_path, 'settings.py')
+    settings_path = os.path.join(project_path, project_path.split(os.sep)[-1], 'settings.py')
     with open(settings_path, 'r') as file:
         lines = file.readlines()
 
@@ -79,7 +79,7 @@ def create_template_directory(project_path):
     return template_dir
 
 def add_template_dir_to_settings(project_path, template_dir):
-    settings_path = os.path.join(project_path, 'settings.py')
+    settings_path = os.path.join(project_path, project_path.split(os.sep)[-1], 'settings.py')
     with open(settings_path, 'r') as file:
         lines = file.readlines()
 
@@ -95,11 +95,53 @@ def add_template_dir_to_settings(project_path, template_dir):
 
     print(f"Template directory added to settings.")
 
+def create_gitignore(project_path):
+    gitignore_path = os.path.join(project_path, '.gitignore')
+    content = """\
+# Environnement virtuel
+env/
+venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# Base de données SQLite
+*.sqlite3
+
+# Fichiers Django
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Config locale
+*.env
+.env
+
+# Fichiers d’IDE
+.vscode/
+.idea/
+
+# Static ou media générés
+/staticfiles/
+/media/
+"""
+    with open(gitignore_path, 'w') as f:
+        f.write(content)
+    print(f".gitignore created at {gitignore_path}")
+
+def create_requirements_file(env_path, project_path):
+    pip_path = os.path.join(env_path, 'Scripts' if os.name == 'nt' else 'bin', 'pip')
+    requirements_path = os.path.join(project_path, 'requirements.txt')
+    subprocess.check_call([pip_path, 'freeze'], stdout=open(requirements_path, 'w'))
+    print(f"requirements.txt created at {requirements_path}")
+
 def main():
     env_name = 'env'
     project_name = 'monProjet'
     app_name = 'monApp'
-    project_path = 'C:\\Users\\Pc Portable\\Documents\\Molengeek-Formation\\Django\\Jour 5\\exo_1'  # Change this to your desired path
+    project_path = 'C:\\Users\\Pc Portable\\Documents\\Molengeek-Formation\\Django\\Jour 6\\exo_1'  # Change this to your desired path
 
     env_path = create_virtual_environment(env_name, project_path)
     activate_virtual_environment(env_path)
@@ -107,9 +149,13 @@ def main():
     django_project_path = os.path.join(project_path, project_name)
     create_django_project(project_name, django_project_path)
     create_django_app(django_project_path, app_name)
-    add_app_to_installed_apps(os.path.join(django_project_path, project_name), app_name)
+    add_app_to_installed_apps(django_project_path, app_name)
     template_dir = create_template_directory(django_project_path)
     add_template_dir_to_settings(django_project_path, template_dir)
+
+    # Adding .gitignore and requirements.txt
+    create_gitignore(project_path)
+    create_requirements_file(env_path, project_path)
 
     print("Setup complete!")
 

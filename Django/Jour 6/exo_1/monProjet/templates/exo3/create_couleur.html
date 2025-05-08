@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Créer une couleur</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ couleur_form.as_p }} 
+    <button type="submit">Créer la couleur</button>
+  </form>
+{% endblock %}

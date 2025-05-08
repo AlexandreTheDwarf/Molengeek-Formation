@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from monApp import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,11 @@ urlpatterns = [
     path('product/<int:id>', views.get_product, name="detailProduct"),
     path('createProduct', views.create_product, name="createProduct"),
     path('update/<int:id>',views.update_product,name="updateProduct"),
-    path('destroy/<int:id>', views.delete_product, name='destroyProduct')
+    path('destroy/<int:id>', views.delete_product, name='destroyProduct'),
+    path('allGalerie', views.all_galeries, name='allGaleries'),
+    path('createGalerie', views.create_galerie, name='createGalerie'),
 ]
+
+# 👇 Ajoute ceci à la fin
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

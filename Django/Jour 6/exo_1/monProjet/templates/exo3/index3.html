@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'home' %}">home</a>
+  <h2>Liste des voitures</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Marque</th>
+        <th>Année de création</th>
+        <th>Couleur</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for voiture in voitures %}
+        <tr>
+          <td>{{ voiture.marque }}</td>
+          <td>{{ voiture.createDate }}</td>
+          <td>{{ voiture.couleur_id.name }}</td>  <!-- Affichage du nom de la couleur -->
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">Aucune voiture trouvée.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <a href="{% url 'create_voiture' %}">Ajouter une voiture</a>
+  <a href="{% url 'create_couleur' %}">Ajouter une couleur</a>
+{% endblock %}

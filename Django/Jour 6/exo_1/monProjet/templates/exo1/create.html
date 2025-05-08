@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<h1>Créer un utilisateur et son profil</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <h2>Informations Utilisateur</h2>
+    {{ user_form.as_p }}
+
+    <h2>Informations Profil</h2>
+    {{ profile_form.as_p }}
+
+    <button type="submit">Enregistrer</button>
+</form>
+{% endblock content %}
+

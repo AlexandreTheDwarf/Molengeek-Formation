@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Accueil</h1>
+    
+    <h2>Exercices</h2>
+    <ul>
+        <li>
+            <a href="{% url 'index' %}">Exo 1 : Utilisateur</a>
+        </li>
+        <li>
+            <a href="{% url 'indexPresident' %}">Exo 2 : Président</a>
+        </li>
+        <li>
+            <a href="{% url 'list_voitures' %}">Exo 3 : Voiture</a>
+        </li>
+        <li>
+            <a href="{% url 'list_books' %}">Exo 4 : Livre</a>
+        </li>
+        <li>
+            <a href="{% url 'django_shop' %}">Exo 5 : Django_Shop</a>
+        </li>
+    </ul>
+{% endblock content %}

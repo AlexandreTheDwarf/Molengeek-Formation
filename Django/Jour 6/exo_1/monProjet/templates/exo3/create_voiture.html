@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Créer une voiture</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ voiture_form.as_p }}
+
+    <button type="submit">Créer la voiture</button>
+  </form>
+{% endblock %}

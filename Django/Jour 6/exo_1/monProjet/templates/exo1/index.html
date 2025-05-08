@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<a href="{% url 'home' %}">home</a>
+
+<h1>Liste des utilisateurs</h1>
+
+<ul>
+    {% for profile in profiles %}
+        <li>
+            {{ profile.user.first_name }} - {{ profile.user.age }} ans
+            <form action="{% url 'delete_user' profile.user.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur et son profil ?')">Supprimer</button>
+            </form>
+        </li>
+    {% empty %}
+        <li>Aucun utilisateur trouvé.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'create' %}">Créer un nouvel utilisateur</a>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+# Environnement virtuel
+env/
+venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# Base de données SQLite
+*.sqlite3
+
+# Fichiers Django
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Config locale
+*.env
+.env
+
+# Fichiers d’IDE
+.vscode/
+.idea/
+
+# Static ou media générés
+/staticfiles/
+/media/

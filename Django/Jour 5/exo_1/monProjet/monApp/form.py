@@ -1,4 +1,4 @@
-from .models import Product
+from .models import Product, Galerie
 from django import forms
 
 class ProductForm(forms.ModelForm):
@@ -6,3 +6,7 @@ class ProductForm(forms.ModelForm):
        model = Product
        fields = ("__all__")
        
+class GalerieForm(forms.ModelForm):
+    class Meta:
+       model = Galerie
+       fields = ("__all__")

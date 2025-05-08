@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'home' %}">Home</a>
+  <h2>Liste des Produits</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom du produit</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Stock</th>
+        <th>Catégories</th>
+        <th>Tags</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.prix }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            {% for category in product.category.all %}
+              {{ category.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </td>
+          <td>
+            {% for tag in product.tag.all %}
+              {{ tag.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="6">Aucun produit trouvé.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h3>Liste des Tags</h3>
+  {% for tag in tags %}
+    <h4>{{ tag.name }}</h4>
+    <ul>
+      {% for product in tag.product_set.all %}
+        <li>{{ product.name }}</li>
+      {% endfor %}
+    </ul>
+  {% empty %}
+    <p>Aucun tag trouvé.</p>
+  {% endfor %}
+
+  <h3>Liste des Catégories</h3>
+  {% for category in categories %}
+    <div>
+      <h4>{{ category.name }}</h4>
+      <form method="POST" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" name="delete_category" value="{{ category.id }}">Supprimer cette catégorie</button>
+      </form>
+      <ul>
+        {% for product in category.product_set.all %}
+          <li>{{ product.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% empty %}
+    <p>Aucune catégorie trouvée.</p>
+  {% endfor %}
+  <a href="{% url 'create_categorie' %}">Ajouter une categorie</a>
+  <br>
+  <a href="{% url 'create_tag' %}">Ajouter un tag</a>
+  <br>
+  <a href="{% url 'create_product' %}">Ajouter un product</a>
+{% endblock %}
